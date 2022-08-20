@@ -8,11 +8,9 @@ import {
   Marker,
 } from "react-simple-maps";
 
-// const geoUrl =
-//   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
-
 const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries-sans-antarctica.json";
+
 type Markers = {
   name: string;
   coordinates: [number, number];
