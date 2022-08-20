@@ -38,14 +38,15 @@ const Home: NextPage = () => {
         <Header />
         <Paper
           sx={{
+            alignItems: "center",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            padding: 10,
             marginY: 2,
+            paddingX: 2,
+            paddingY: 10,
           }}
         >
-          <Typography variant="h3" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             Free Adblock DNS
           </Typography>
 
