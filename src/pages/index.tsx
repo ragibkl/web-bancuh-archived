@@ -1,4 +1,5 @@
 import {
+  Box,
   Card,
   CardContent,
   CardHeader,
@@ -11,6 +12,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Header from "../components/Header";
+import MapChart from "../components/MapChart";
 
 function FeatGridCard(props: { title: string; children: string }) {
   const { title, children } = props;
@@ -97,6 +99,26 @@ const Home: NextPage = () => {
             open.
           </FeatGridCard>
         </Grid>
+
+        <Typography variant="h5" gutterBottom sx={{ marginTop: 5 }}>
+          Our Servers
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          We have servers located in around the world. Find the closest one to
+          you!
+        </Typography>
+
+        <Paper
+          sx={{
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            marginY: 2,
+          }}
+        >
+          <MapChart />
+        </Paper>
       </Container>
     </>
   );
