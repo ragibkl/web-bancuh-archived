@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         </Paper>
 
         <Grid container spacing={2}>
-          <FeatGridCard title="Safe and Ad-free browsing experience">
+          <FeatGridCard title="Safe and Ad-free browsing">
             Browse the web, without any intrusive ads or tracking services.
             Known malware sites are also blocked to further protect your
             experience.
