@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             flexDirection: "column",
             marginY: 2,
             paddingX: 2,
-            paddingY: 10,
+            paddingY: 6,
           }}
         >
           <Typography variant="h4" gutterBottom>
@@ -51,8 +51,7 @@ const Home: NextPage = () => {
           </Typography>
 
           <Typography variant="overline" gutterBottom sx={{ fontSize: 20 }}>
-            Block ads on you entire wifi network, laptop, PC, tablets and
-            phones.
+            Block ads on your entire wifi, laptop, PC, tablets and phones.
           </Typography>
         </Paper>
 
