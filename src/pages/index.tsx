@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             flexDirection: "column",
             alignItems: "center",
             paddingY: 20,
-            marginY: 10,
+            marginY: 2,
           }}
         >
           <Typography variant="h2" gutterBottom>
@@ -53,7 +53,6 @@ const Home: NextPage = () => {
             phones.
           </Typography>
         </Paper>
-        <Divider />
 
         <Grid container spacing={2}>
           <FeatGridCard title="Safe and Ad-free browsing experience">
