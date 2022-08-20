@@ -16,7 +16,7 @@ import Header from "../components/Header";
 function FeatGridCard(props: { title: string; children: string }) {
   const { title, children } = props;
   return (
-    <Grid item xs={4}>
+    <Grid item xs={12} sm={6} lg={4}>
       <Card sx={{ height: "100%" }}>
         <CardHeader title={title} />
         <CardContent>{children}</CardContent>
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         </Paper>
         <Divider />
 
-        <Grid container spacing={6}>
+        <Grid container spacing={2}>
           <FeatGridCard title="Safe and Ad-free browsing experience">
             Browse the web, without any intrusive ads or tracking services.
             Known malware sites are also blocked to further protect your
