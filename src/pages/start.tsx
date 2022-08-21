@@ -124,8 +124,64 @@ const GetStarted: NextPage<Props, Props> = ({ servers }) => {
                 <Tab label="Laptop/PC" value="3" />
               </TabList>
             </Box>
+
             <TabPanel value="1">Home WiFi router</TabPanel>
-            <TabPanel value="2">Android</TabPanel>
+
+            <TabPanel value="2">
+              <Typography variant="h5" gutterBottom sx={{ marginTop: 2 }}>
+                Android
+              </Typography>
+
+              <Typography variant="h6" gutterBottom sx={{ marginTop: 2 }}>
+                Private DNS
+              </Typography>
+
+              <Typography variant="body1" gutterBottom>
+                Android versions 9 and above has a nifty feature called Private
+                DNS.
+              </Typography>
+
+              <Typography variant="body1" gutterBottom>
+                By default, when your Android device connects to the Internet
+                via WiFi, it will use the default DNS servers assigned via the
+                WiFi DHCP service. When on mobile data, it will be set by your
+                ISP.
+              </Typography>
+
+              <Typography variant="body1" gutterBottom>
+                With Private DNS, your Android device can connect to a different
+                DNS server that you specify, ignoring the network DNS config.
+                However, instead of using the normal DNS protocol via udp/tcp
+                over port 53, Private DNS uses a different DNS-over-TLS (DoT)
+                protocol instead. This means that the DNS queries are encrypted.
+              </Typography>
+
+              <Typography variant="h6" gutterBottom sx={{ marginTop: 2 }}>
+                Setup Bancuh DNS via Android Private DNS (DNS-over-TLS)
+              </Typography>
+
+              <Typography variant="body1" gutterBottom>
+                Since our Bancuh DNS already supports DoT protocol, setting this
+                up on Android is easy.
+              </Typography>
+
+              <Typography variant="body1" gutterBottom>
+                <ol>
+                  <li>On your Android device, open the Settings app.</li>
+                  <li>Navigate to Connection and Sharing - Private DNS.</li>
+                  <li>
+                    Set the Private DNS value to a custom value. Feel free to
+                    use any of the following values:
+                    <ul>
+                      {locationServers.map((s) => (
+                        <li key={s.fullName}>{s.fullName}</li>
+                      ))}
+                    </ul>
+                  </li>
+                </ol>
+              </Typography>
+            </TabPanel>
+
             <TabPanel value="3">Laptop/PC</TabPanel>
           </TabContext>
         </Paper>
