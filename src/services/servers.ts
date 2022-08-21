@@ -42,7 +42,8 @@ export async function getServers(): Promise<Server[]> {
     { shortName: "sg-dns1", location: "Singapore" },
     { shortName: "sg-dns2", location: "Singapore" },
     { shortName: "fr-dns1", location: "France" },
-    { shortName: "fr-dns2", location: "Tokyo" },
+    { shortName: "fr-dns2", location: "France" },
+    { shortName: "jp-dns1", location: "Tokyo" },
   ];
 
   servers = await Promise.all(serversList.map(getServerDetails));

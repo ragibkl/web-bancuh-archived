@@ -1,5 +1,5 @@
 import {
-  Box,
+  Button,
   Card,
   CardContent,
   CardHeader,
@@ -8,12 +8,12 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import type { NextPage, GetServerSideProps } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 import Header from "../components/Header";
 import MapChart from "../components/MapChart";
-import { getServers, Server } from "../services/servers";
 
 function FeatGridCard(props: { title: string; children: string }) {
   const { title, children } = props;
@@ -28,20 +28,7 @@ function FeatGridCard(props: { title: string; children: string }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const servers = await getServers();
-
-  return {
-    props: { servers },
-  };
-};
-
-type Props = { servers: Server[] };
-
-const Home: NextPage<Props, Props> = (props) => {
-  const { servers } = props;
-
-  console.log(servers);
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -69,6 +56,12 @@ const Home: NextPage<Props, Props> = (props) => {
           <Typography variant="overline" gutterBottom sx={{ fontSize: 20 }}>
             Block ads on your entire wifi, laptop, PC, tablets and phones.
           </Typography>
+
+          <Link href="/start">
+            <Button variant="contained" size="large">
+              Get Started
+            </Button>
+          </Link>
         </Paper>
 
         <Grid container spacing={2}>
@@ -80,8 +73,8 @@ const Home: NextPage<Props, Props> = (props) => {
 
           <FeatGridCard title="Zero Cost & Completely FREE">
             This service will remain free for as long as possible. We run and
-            maintain the servers out-of-pocket, so you don't have to shell out a
-            single penny!
+            maintain the servers out-of-pocket, so you don&apos;t have to shell
+            out a single penny!
           </FeatGridCard>
 
           <FeatGridCard title="Minimal Setup">
@@ -133,16 +126,6 @@ const Home: NextPage<Props, Props> = (props) => {
         >
           <MapChart />
         </Paper>
-
-        {servers.map((s) => (
-          <Card>
-            <CardHeader title={`${s.fullName} (${s.location})`} />
-            <CardContent>
-              <Typography display="block">{s.ipv4}</Typography>
-              <Typography display="block">{s.ipv6}</Typography>
-            </CardContent>
-          </Card>
-        ))}
       </Container>
     </>
   );

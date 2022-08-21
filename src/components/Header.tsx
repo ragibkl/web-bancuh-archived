@@ -20,14 +20,14 @@ export default function Header() {
             </Button>
           </Link>
 
-          <Box sx={{ flex: 1 }} />
-
-          <Link href="/get-started">
+          <Link href="/start">
             <Button color="inherit">Get Started</Button>
           </Link>
 
+          <Box sx={{ flex: 1 }} />
+
           <Link href="https://github.com/ragibkl/adblock-dns-server">
-            <IconButton>
+            <IconButton color="inherit">
               <GitHubIcon />
             </IconButton>
           </Link>
