@@ -6,8 +6,12 @@ import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
+  const selectedStart = router.pathname === "/start";
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -21,7 +25,17 @@ export default function Header() {
           </Link>
 
           <Link href="/start">
-            <Button color="inherit">Get Started</Button>
+            <Button color="inherit">
+              <Typography
+                sx={
+                  selectedStart
+                    ? { fontWeight: "bold", textDecoration: "underline 2px" }
+                    : {}
+                }
+              >
+                Get Started
+              </Typography>
+            </Button>
           </Link>
 
           <Box sx={{ flex: 1 }} />
