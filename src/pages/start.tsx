@@ -13,25 +13,16 @@ import {
   Typography,
 } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import type { NextPage, GetServerSideProps } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 
 import Header from "../components/Header";
-import { getServers, Server } from "../services/servers";
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const servers = await getServers();
-
-  return {
-    props: { servers },
-  };
-};
-
-type Props = { servers: Server[] };
+import { servers } from "../services/servers";
 
 const locations = ["Singapore", "France", "Tokyo"];
-const GetStarted: NextPage<Props, Props> = ({ servers }) => {
+
+const GetStarted: NextPage = () => {
   const [location, setLocation] = useState<string>(locations[0]);
   const [value, setTab] = useState<string>("1");
   const locationServers = servers.filter((s) => s.location === location);

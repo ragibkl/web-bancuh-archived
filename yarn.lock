@@ -955,11 +955,6 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-dns2@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/dns2/-/dns2-2.0.5.tgz#2c668882ab7402a87de97ee41543085be10ff00a"
-  integrity sha512-dznYrQU+Txcz++klGLBY9YR3WLOGHTy2vAKAqF+yYw1KaKFm5f5Y4jbbFEvohJf8YtZ0J2SzZlZx2k6LV4zJqQ==
-
 doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
