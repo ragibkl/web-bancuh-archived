@@ -8,10 +8,24 @@ import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import { useRouter } from "next/router";
 
-export default function Header() {
+function HeaderLink(props: { href: string; children: JSX.Element | string }) {
   const router = useRouter();
-  const selectedStart = router.pathname === "/start";
 
+  const isActive = router.pathname.startsWith(props.href);
+  const sx = isActive
+    ? { fontWeight: "bold", textDecoration: "underline 2px" }
+    : {};
+
+  return (
+    <Link href={props.href}>
+      <Button color="inherit">
+        <Typography sx={sx}>{props.children}</Typography>
+      </Button>
+    </Link>
+  );
+}
+
+export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -24,19 +38,8 @@ export default function Header() {
             </Button>
           </Link>
 
-          <Link href="/start">
-            <Button color="inherit">
-              <Typography
-                sx={
-                  selectedStart
-                    ? { fontWeight: "bold", textDecoration: "underline 2px" }
-                    : {}
-                }
-              >
-                Get Started
-              </Typography>
-            </Button>
-          </Link>
+          <HeaderLink href="/start">Get Started</HeaderLink>
+          <HeaderLink href="/faq">FAQ</HeaderLink>
 
           <Box sx={{ flex: 1 }} />
 
