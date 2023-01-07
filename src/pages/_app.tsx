@@ -1,4 +1,4 @@
-import { grey } from "@mui/material/colors";
+import { green, indigo } from "@mui/material/colors";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import type { AppProps } from "next/app";
@@ -11,10 +11,10 @@ import "@fontsource/roboto/700.css";
 const theme = createTheme({
   palette: {
     primary: {
-      main: grey[700],
+      main: indigo[700],
     },
     secondary: {
-      main: grey[300],
+      main: green[500],
     },
   },
 });

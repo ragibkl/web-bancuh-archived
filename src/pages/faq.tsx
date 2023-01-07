@@ -32,7 +32,7 @@ const FAQ: NextPage = () => {
           </Typography>
           <Typography variant="h6">How much does this cost?</Typography>
           <Typography variant="body1" gutterBottom>
-            It&aposs free. I never intended to charge people for this anyway.
+            It&apos;s free. I never intended to charge people for this anyway.
             <br />I might set up some ways for you to be able to donate to me to
             keep this running. I am open to suggestions.
           </Typography>
@@ -62,10 +62,10 @@ const FAQ: NextPage = () => {
           </Typography>
           <Typography variant="h6">Who should use this service?</Typography>
           <Typography variant="body1" gutterBottom>
-            If you don&apost like to see ads while browsing, use this. Currently, we
-            also filter out some known adult content sites, so if you apply this
-            to your home router, we can make the internet a little safer for
-            your kids.
+            If you don&apos;t like to see ads while browsing, use this.
+            Currently, we also filter out some known adult content sites, so if
+            you apply this to your home router, we can make the internet a
+            little safer for your kids.
           </Typography>
           <Typography variant="h6">What type of content is blocked?</Typography>
           <Typography variant="body1" gutterBottom>
@@ -80,19 +80,19 @@ const FAQ: NextPage = () => {
           <Typography variant="body1" gutterBottom>
             Whenever your browser or apps need to load content from the
             Internet, your device will first have to find out the IP address of
-            the server with that content. It will first look in your system&aposs
-            hosts file. Next, it will try your DNS servers. DNS servers then
-            provides the IP address of the domain name that serves the content.
-            Having the correct IP address of domain names is crucial for loading
-            Internet content.
+            the server with that content. It will first look in your
+            system&apos;s hosts file. Next, it will try your DNS servers. DNS
+            servers then provides the IP address of the domain name that serves
+            the content. Having the correct IP address of domain names is
+            crucial for loading Internet content.
             <br />
             An adblock DNS server however, does something extra. If the domain
-            name is known for hosting ads, we perform a &aposwhite lie&apos, and
-            redirect to a null server. Not having the correct IP address for
+            name is known for hosting ads, we perform a &apos;white lie&apos;,
+            and redirect to a null server. Not having the correct IP address for
             adservers means that ads will fail to load.
             <br />
             If you use any available adblock DNS server on your home router, or
-            your laptop, ads won&apost load.
+            your laptop, ads won&apos;t load.
             <br />
           </Typography>
           <Typography variant="h6">
@@ -111,10 +111,10 @@ const FAQ: NextPage = () => {
             Some mobile apps nowadays also have ads placeholder in-app, and
             extensions will not apply here.
             <br />
-            Extensions also only apply to a single browser where it&aposs installed.
-            You probably don&apost want to install adblock extensions on every
-            single device on your home network. In comparison, adblock dns will
-            apply to your entire network.
+            Extensions also only apply to a single browser where it&apos;s
+            installed. You probably don&apos;t want to install adblock
+            extensions on every single device on your home network. In
+            comparison, adblock dns will apply to your entire network.
           </Typography>
           <Typography variant="h6">
             Why not edit the hosts file instead?
@@ -123,30 +123,31 @@ const FAQ: NextPage = () => {
             Actually, using hosts file would be slightly faster and more
             reliable than using our adblock DNS servers. When possible, you
             should use hosts file instead. Again, you can still use our adblock
-            DNS servers to cover for other use cases. Here&aposs why.
+            DNS servers to cover for other use cases. Here&apos;s why.
             <br />
             Host files work offline, your device will immediately know which ad
             domains to block, without relying on external providers. You can
-            then stick to Google&aposs DNS or OpenDNS servers for regular content,
-            which should be more reliable and faster than my own servers.
+            then stick to Google&apos;s DNS or OpenDNS servers for regular
+            content, which should be more reliable and faster than my own
+            servers.
             <br />
             There are also tools that can help you configure this. AdAway works
             on rooted Android devices. Some projects
             (https://github.com/StevenBlack/hosts) provide hosts files that you
             can use straight away.
             <br />
-            But again, it does not work for all devices. I&aposm not sure if it is
+            But again, it does not work for all devices. I am not sure if it is
             possible on IOS, and doing this on Android requires the device to be
             rooted. And you have to configure each single device on your
             network.
             <br />
             It is also possible that you are also using your hosts file for
-            other purposes, and you don&apost want to pollute it with thousands of
-            lines of ad domains. Also, a misconfigured host file will disrupt
+            other purposes, and you don&apos;t want to pollute it with thousands
+            of lines of ad domains. Also, a misconfigured host file will disrupt
             your Internet.
             <br />
-            Use adblock DNS when you don&apost want to deal with hosts file. It&aposs
-            easier.
+            Use adblock DNS when you don&apos;t want to deal with hosts file.
+            It&apos;s easier.
             <br />
           </Typography>
           <Typography variant="h6">
@@ -163,8 +164,8 @@ const FAQ: NextPage = () => {
             It does not seem to work. How do I fix this?
           </Typography>
           <Typography variant="body1" gutterBottom>
-            At the moment, we don&apost have a dedicated troubleshooting page or
-            help page yet. Will add this soon.
+            At the moment, we don&apos;t have a dedicated troubleshooting page
+            or help page yet. Will add this soon.
             <br />
             For now, head over to the project issues page on GitHub at
             https://github.com/ragibkl/adblock-dns-server/issues

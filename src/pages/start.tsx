@@ -134,9 +134,10 @@ const GetStarted: NextPage = () => {
                 Usually, there is a WiFi router that connects to the internet
                 via some ISP provided connection. The WiFi router then gets
                 automatically assigned an IP Address and a set of DNS servers to
-                use <b>(WAN DNS)</b>. Usually, this is either Google&aposs or your
-                ISP&aposs public DNS servers. Whenever the router needs to resolve a
-                domain name into an ip address, it will use these DNS servers.
+                use <b>(WAN DNS)</b>. Usually, this is either Google&apos;s or
+                your ISP&apos;s public DNS servers. Whenever the router needs to
+                resolve a domain name into an ip address, it will use these DNS
+                servers.
               </Typography>
 
               <Typography variant="body1" gutterBottom>
@@ -167,7 +168,7 @@ const GetStarted: NextPage = () => {
                   </li>
                   <li>
                     Otherwise, router sends DNS request upstream to Google or
-                    ISP&aposs DNS <b>(WAN DNS)</b>
+                    ISP&apos;s DNS <b>(WAN DNS)</b>
                   </li>
                   <li>
                     DNS answer from upstream is cached in memory by the router,
@@ -229,8 +230,9 @@ const GetStarted: NextPage = () => {
                   </li>
                   <li>
                     It is also possible that your router have a separate page
-                    for managing <b>ipv6 WAN DNS</b> addresses. If so, you&aposll
-                    have to change these at the appropriate locations.
+                    for managing <b>ipv6 WAN DNS</b> addresses. If so,
+                    you&apos;ll have to change these at the appropriate
+                    locations.
                     <Box maxWidth={800}>
                       <Image src={homeRouterWanIP6Image} />
                     </Box>
