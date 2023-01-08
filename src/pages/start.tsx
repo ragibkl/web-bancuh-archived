@@ -22,6 +22,10 @@ import homeRouterImage from "../images/home_router.drawio.png";
 import homeRouterLoginImage from "../images/home_router_login.png";
 import homeRouterWanIPImage from "../images/home_router_wan_ip.png";
 import homeRouterWanIP6Image from "../images/home_router_wan_ip6.png";
+import win10AdapterListImage from "../images/windows_10_adapter_list.png";
+import win10AdapterPropertiesImage from "../images/windows_10_adapter_properties.png";
+import win10Ipv4Image from "../images/windows_10_ipv4.png";
+import win10Ipv6Image from "../images/windows_10_ipv6.png";
 import Header from "../components/Header";
 import { servers } from "../services/servers";
 
@@ -114,7 +118,7 @@ const GetStarted: NextPage = () => {
               <TabList onChange={(_e, v) => setTab(v)} aria-label="tabs">
                 <Tab label="WiFi Router" value="1" />
                 <Tab label="Android" value="2" />
-                <Tab label="Laptop/PC" value="3" />
+                <Tab label="Windows 10" value="3" />
               </TabList>
             </Box>
 
@@ -300,7 +304,110 @@ const GetStarted: NextPage = () => {
               </Typography>
             </TabPanel>
 
-            <TabPanel value="3">Laptop/PC</TabPanel>
+            <TabPanel value="3">
+              <Typography variant="h5" gutterBottom sx={{ marginTop: 2 }}>
+                Windows 10
+              </Typography>
+
+              <Typography variant="body1" gutterBottom>
+                On Windows 10 laptops and PCs, the default DNS settings are
+                usually set automatically by your network DHCP settings. This is
+                usually the IP address of your WiFi router or another public DNS
+                service. You can override these DNS settings to use Bancuh DNS
+                instead by using the following steps.
+              </Typography>
+
+              <Typography variant="h6" gutterBottom sx={{ marginTop: 2 }}>
+                Setup Bancuh DNS via Windows 10 Control Panel
+              </Typography>
+
+              <Typography variant="body1" gutterBottom>
+                Open the <b>Control Panel</b> app. From there, go to{" "}
+                <b>Network and Internet</b>, and then{" "}
+                <b>Network and Sharing Center</b>. On the left tab, go to{" "}
+                <b>Change adapter settings</b>. From there, you should see a
+                list of your network devices, either WiFi or Ethernet.
+              </Typography>
+
+              <Box maxWidth={400}>
+                <Image layout="responsive" src={win10AdapterListImage} />
+              </Box>
+
+              <Typography variant="body1" gutterBottom>
+                Double click on the network that you want to change. Then, click
+                on <b>Properties</b>. You should see a list of items for this
+                network adapter.
+              </Typography>
+
+              <Box maxWidth={300}>
+                <Image layout="responsive" src={win10AdapterPropertiesImage} />
+              </Box>
+
+              <Typography variant="body1" gutterBottom>
+                On this screen, we are interested in 2 settings:
+                <ul>
+                  <li>
+                    <b>Internet Protocol Version 4 (TCP/IPv4)</b>
+                  </li>
+                  <li>
+                    <b>Internet Protocol Version 6 (TCP/IPv6)</b>
+                  </li>
+                </ul>
+                Double-click on each of them and update them as follows:
+              </Typography>
+
+              <Typography variant="h6" gutterBottom sx={{ marginTop: 2 }}>
+                Internet Protocol Version 4 (TCP/IPv4)
+              </Typography>
+
+              <Box maxWidth={300}>
+                <Image layout="responsive" src={win10Ipv4Image} />
+              </Box>
+
+              <Typography variant="body1" gutterBottom>
+                <ul>
+                  <li>
+                    Click on the radio button{" "}
+                    <b>Use the following DNS server addresses</b>.
+                  </li>
+                  <li>
+                    Preferred DNS Server: <b>{locationServers[0].ipv4}</b>
+                  </li>
+                  <li>
+                    Alternate DNS Server:{" "}
+                    <b>
+                      {locationServers[1] ? servers[1].ipv4 : "<leave_blank>"}
+                    </b>
+                  </li>
+                </ul>
+              </Typography>
+
+              <Typography variant="h6" gutterBottom sx={{ marginTop: 2 }}>
+                Internet Protocol Version 6 (TCP/IPv6)
+              </Typography>
+
+              <Box maxWidth={300}>
+                <Image layout="responsive" src={win10Ipv6Image} />
+              </Box>
+
+              <Typography variant="body1" gutterBottom>
+                <ul>
+                  <li>
+                    Click on the radio button{" "}
+                    <b>Use the following DNS server addresses</b>.
+                  </li>
+                  <li>
+                    Preferred DNS Server: <b>{locationServers[0].ipv6}</b>
+                  </li>
+                  <li>
+                    Alternate DNS Server:{" "}
+                    <b>
+                      {locationServers[1] ? servers[1].ipv6 : "<leave_blank>"}
+                    </b>
+                  </li>
+                </ul>
+              </Typography>
+            </TabPanel>
           </TabContext>
         </Paper>
       </Container>
